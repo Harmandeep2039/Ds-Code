@@ -7,16 +7,12 @@ public class linkedlistBegAndEnd {
 		        Node next;    
 		            
 		        public Node(int data) {    
-		            this.data = data;    
-		            //this.next = null;    
+		            this.data = data;        
 		        }    
-		    }    
-		//Represent the head of the singly linked list    
-		    public Node head = null; 
-		    
-		  //display() will display all the nodes present in the list    
+		    }       
+		    public Node head = null;    
 		    public void display() {    
-		        //Node current will point to head    
+		          
 		        Node current = head;    
 		            
 		        if(head == null) {    
@@ -24,8 +20,7 @@ public class linkedlistBegAndEnd {
 		            return;    
 		        }    
 		        System.out.println("Nodes of singly linked list: ");    
-		        while(current != null) {    
-		            //Prints each node by incrementing pointer    
+		        while(current != null) {        
 		            System.out.print(current.data + " ");    
 		            current = current.next;    
 		        }    
@@ -33,9 +28,8 @@ public class linkedlistBegAndEnd {
 		    }    
 		    
 		    public void insertBeg(int data)
-		    { //Create a new node    
-		        Node temp = new Node(data);
-		        //Checks if the list is empty    
+		    {
+		        Node temp = new Node(data);    
 		        if(head == null) {    
 		        	 head = temp; 
 		        }
@@ -48,9 +42,7 @@ public class linkedlistBegAndEnd {
 		    
 		    public void insertEnd(int data)
 		    {
-		    	//Create a new node    
-		        Node temp = new Node(data);
-		        //Checks if the list is empty    
+		        Node temp = new Node(data);    
 		        if(head == null) {    
 		        	 head = temp; 
 		        }
@@ -61,8 +53,6 @@ public class linkedlistBegAndEnd {
 		        	while (last.next != null) { 
 		                last = last.next; 
 		            } 
-		        	
-		        	// Insert the new_node at last node 
 		            last.next = temp; 
 		        }
 		    }
@@ -106,27 +96,20 @@ public class linkedlistBegAndEnd {
 		    
 		    
 		public static void main(String[] args) {
-			// TODO Auto-generated method stub
-			
 			linkedlistBegAndEnd ob= new linkedlistBegAndEnd();
-			
 			ob.insertBeg(2);
 			ob.insertBeg(23);
 			ob.insertBeg(20);
 			ob.insertBeg(40);
-			
 			ob.display();
-		
 			ob.insertEnd(45);
 			ob.insertEnd(50);
 			ob.display();
-			
-//			ob.deletionBeg();
-//			ob.display();
-//			
-//			ob.deletionEnd();
-//			ob.display();
-//	        
+			ob.deletionBeg();
+	                ob.display();
+			ob.deletionEnd();
+			ob.display();
+	        
 			
 		}
 
